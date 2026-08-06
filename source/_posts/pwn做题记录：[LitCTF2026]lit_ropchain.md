@@ -7,10 +7,11 @@ categories: 安全
 # pwn做题记录：[LitCTF2026] lit_ropchain
 **题目链接：https://platform.cyclens.tech/#/challenge/97**
 拿到题目附件，查看一下保护
-![image](/images/pwn做题记录：[LitCTF2026]lit_ropchain/img_1.png)
+![image](/images/pwn做题记录：LitCTF2026lit_ropchain/img_1.png)
 
 保护只开了一个NX
 附件里面给了源码，从源码能看到题目给了一些需要动代码片段，主函数里有栈溢出，偏移0x40+0x8
+
 ```
 #include <stdio.h>
 #include <stdlib.h>
@@ -60,14 +61,15 @@ int main() {
 
 ```
 这里有pop寄存器的gadget，可以设置rdi，rsi和rdx的值，在ida里面也可以看到，在kali里面可以直接利用ROPgadget来找到对应代码段的地址
-![image](/images/pwn做题记录：[LitCTF2026]lit_ropchain/img_2.png)
+![image](/images/pwn做题记录：LitCTF2026lit_ropchain/img_2.png)
 
 放到ida里面还能看见程序里面已经准备了system函数，但是**没有“/bin/sh”字符串**
 
-![image](/images/pwn做题记录：[LitCTF2026]lit_ropchain/img_3.png)
+![image](/images/pwn做题记录：LitCTF2026lit_ropchain/img_3.png)
 
 另外还有源码中出现的gadget
 *gadget_pop_rdi:*
+
 ```
 ; void __cdecl gadget_pop_rdi()
 public gadget_pop_rdi
@@ -131,7 +133,7 @@ payload2=b'a'*offset+p64(ret)+p64(pop_rdi_ret)+p64(bss)+p64(system)
 
 ```
 发送即可拿到shell
-![image](/images/pwn做题记录：[LitCTF2026]lit_ropchain/img_4.png)
+![image](/images/pwn做题记录：LitCTF2026lit_ropchain/img_4.png)
 
 ### 完整脚本代码
 ```
