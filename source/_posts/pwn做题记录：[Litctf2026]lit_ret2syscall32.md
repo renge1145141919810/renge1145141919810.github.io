@@ -1,6 +1,7 @@
 ---
 title: pwn做题记录：【Litctf2026】lit_ret2syscall32
 date: 2026-07-31
+tags: [CTF,pwn]
 categories: 安全
 ---
 

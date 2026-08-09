@@ -1,6 +1,7 @@
 ---
 title: AI安全接触：play.lakera.ai/agent-breaker CorpConnect Messenger (level1-level3)做题记录
 date: 2026-08-06
+tags: [AI,靶机]
 categories: 安全
 ---
 

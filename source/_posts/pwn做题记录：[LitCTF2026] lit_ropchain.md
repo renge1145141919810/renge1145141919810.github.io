@@ -1,6 +1,7 @@
 ---
 title: pwn做题记录：[LitCTF2026] lit_ropchain
 date: 2026-07-31
+tags: [CTF,pwn]
 categories: 安全
 ---
 

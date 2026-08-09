@@ -1,6 +1,7 @@
 ---
 title: pwn做题记录：[内部赛]flower（ctfshow）
 date: 2026-07-31
+tags: [CTF,pwn]
 categories: 安全
 ---
 

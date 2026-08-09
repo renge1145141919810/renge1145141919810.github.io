@@ -1,6 +1,7 @@
 ---
 title: badusb实验：一次将p4wnp1_aloa和metasploit结合利用的尝试
 date: 2026-08-06
+tags: [树莓派,近源攻击]
 categories: 安全
 ---
 
