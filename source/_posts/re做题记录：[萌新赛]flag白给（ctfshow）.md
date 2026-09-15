@@ -1,3 +1,12 @@
+---
+title: re做题记录：[萌新赛]flag白给（ctfshow）
+date: 2026-09-15
+tags: [CTF,reverse]
+categories: 安全
+---
+
+
+
 # re做题记录：[萌新赛]flag白给（ctfshow）
 
 
